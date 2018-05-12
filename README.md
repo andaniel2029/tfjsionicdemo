@@ -8,27 +8,33 @@ In detail,tf.loadModel not working it shows "TypeError: Failed to fetch"
 **Requirements**
 
 cli packages: (C:\Users\Administrator\AppData\Roaming\npm\node_modules)
-    @ionic/cli-utils  : 1.19.2
+
+    @ionic/cli-utils  : 1.19.2    
     ionic (Ionic CLI) : 3.20.0
 
 global packages:
+
     cordova (Cordova CLI) : not installed
 
 local packages:
+
     @ionic/app-scripts : 3.1.8
     Cordova Platforms  : none
     Ionic Framework    : ionic-angular 3.9.2
 
 System:
+
     Android SDK Tools : 25.2.5
     Node              : v8.9.1
     npm               : 5.6.0
     OS                : Windows 10
 
 Environment Variables:
+
     ANDROID_HOME : F:\android-sdk
 
 Misc:
+
     backend : legacy
 
 
@@ -39,14 +45,20 @@ npm install
 **Usage**
 
 cd yourproejct
+
 ionic serve --lab
 
 **Tests**
 
 Run this command to see web version
+
 ionic serve --lab 
 
+
 For Android app test, you need to build first using following command
+
+ionic cordova platform add android
+
 ionic cordova build android --prod --release
 
 You can find apk file under,
@@ -70,6 +82,7 @@ typescript: ...ng_tfjsmnist/node_modules/@tensorflow/tfjs-converter/dist/data/co
 then, open compiled_api.d.ts file add following line.      
       
 import * as $protobuf from "protobufjs";
+
 import * as Long from "long"; // add this line
 
 
@@ -82,11 +95,16 @@ ionic info
 To see installed package info
 
 npm list
+
 npm list --depth=0
 
 To see installed specific package info, for instance if you want to see tfjs version info, run one of following command
 
+
 npm info tfjs version
+
 npm view tfjs version
+
 npm show tfjs version
+
 npm v tfjs version
