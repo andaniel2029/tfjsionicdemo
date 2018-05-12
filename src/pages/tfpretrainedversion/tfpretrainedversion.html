@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Pretrained Model Test</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+        <h2>Accuracy : {{accuracyResult}}</h2>
+    </div>
+    <ion-item>
+        <ion-label stacked>Model</ion-label>
+        <ion-label>PreTrainedModel</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Test DataSet</ion-label>
+        <ion-select [(ngModel)]="selectedDataSet" interface="popover">
+            <ion-option *ngFor="let item of testDataSetDropDownSelect" [value]="item.value">{{item.id}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-list>
+        <ion-item *ngFor="let number of predictResultLabelList">
+            <ion-icon name="{{number.correct ? 'checkbox':'alert'}}" item-start
+                      color="{{number.correct ? 'correct':'wrong'}}"></ion-icon>
+            <p><strong>Label : {{number.xtest}} , Predict : {{number.ylabel}}</strong></p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <div class="btncenter">
+        <button ion-button color="save" (click)="testPreTrainedModel()">Predict</button>
+    </div>
+</ion-footer>
