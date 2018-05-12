@@ -76,13 +76,16 @@ import * as Long from "long"; // add this line
 **Useful command**
 
 To see general environment info
+
 ionic info
 
 To see installed package info
+
 npm list
 npm list --depth=0
 
 To see installed specific package info, for instance if you want to see tfjs version info, run one of following command
+
 npm info tfjs version
 npm view tfjs version
 npm show tfjs version
