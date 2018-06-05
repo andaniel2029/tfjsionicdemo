@@ -2,8 +2,9 @@
 
 This demo shows how to use tensorflowjs in ionic framework.
 However, it works only when you run on the server. ie. http://localhost:8100/ionic-lab
+
 It doesn't work when you build apk for android then install apk file on an Andorid phone.
-In detail,tf.loadModel not working it shows "TypeError: Failed to fetch"
+In detail,tf.loadModel not working it shows **"TypeError: Failed to fetch"**
 
 **Requirements**
 
